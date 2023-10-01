@@ -10,4 +10,4 @@ matplotlib
 I recommend to run this program through Spyder from Anaconda since most of that modules are already pre installed with Anaconda(except ttkbootstrap). Some things to note is that, if you use Spyder in MAC OS to run this program, be sure to close the program from the dock by right clicking it and pressing quite / force quit from there.
 
 I hope this repository is usefull, thank you for coming!
-![Screenshot](exampleImage.png)
+![Screenshot](exampleImages.png)

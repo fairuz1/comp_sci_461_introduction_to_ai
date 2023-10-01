@@ -78,6 +78,3 @@ def displayGraphImage(nodes):
     plt.axis("off")
     plt.tight_layout()
     plt.show()
-
-a = ['Argonia', 'Caldwell', 'South_Haven']
-displayGraphImage(a)

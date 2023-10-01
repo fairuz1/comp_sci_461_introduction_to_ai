@@ -187,17 +187,20 @@ def backtracking(graph, start_city, end_city):
 
 def totalDistance(graph, city_paths):
     total_distance = 0
+    node_to_node_distance = {}
     if len(city_paths) == 0:
         return total_distance
     else:
         end_city = city_paths[-1]
         for i in range(len(city_paths)-1):
+            euclidDistance = graph.euclidDistance(graph.getCoordinate(city_paths[i]), graph.getCoordinate(city_paths[i+1]))
             if city_paths[i] != end_city:
-                total_distance += graph.euclidDistance(graph.getCoordinate(city_paths[i]), graph.getCoordinate(city_paths[i+1]))
+                node_to_node_distance[city_paths[i]] = euclidDistance
+                total_distance += euclidDistance
             elif city_paths[i] == end_city:
-                total_distance += graph.euclidDistance(graph.getCoordinate(city_paths[i]), graph.getCoordinate(city_paths[i+1]))
+                total_distance += euclidDistance
                 break
-    return total_distance
+    return [total_distance, node_to_node_distance]
     
 def move_cost(graph, vertex_1, vertex_2):
     for city in graph:

@@ -7,6 +7,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 from ttkbootstrap.constants import *
 from dataStructure import *
+from graphImage import *
 import sys
 
 class main_app(ttk.Frame):
@@ -88,7 +89,7 @@ class main_app(ttk.Frame):
         container_1 = ttk.Frame(self)
         container_1.pack(fill=X, expand=YES, pady=5)
         
-        lbl_1 = ttk.Label(master=container_1, text="Paths Found:")
+        lbl_1 = ttk.Label(master=container_1, text="Paths Found:", font="bold")
         lbl_1.pack(side=LEFT, padx=5)
         
         self.lbl_11 = ttk.Label(master=container_1, text="")
@@ -97,7 +98,7 @@ class main_app(ttk.Frame):
         container_2 = ttk.Frame(self)
         container_2.pack(fill=X, expand=YES, pady=5)
         
-        lbl_2 = ttk.Label(master=container_2, text="Total Time (in seconds):")
+        lbl_2 = ttk.Label(master=container_2, text="Total Time (in seconds):", font="bold")
         lbl_2.pack(side=LEFT, padx=5)
         
         self.lbl_22 = ttk.Label(master=container_2, text="")
@@ -106,11 +107,20 @@ class main_app(ttk.Frame):
         container_3 = ttk.Frame(self)
         container_3.pack(fill=X, expand=YES, pady=5)
         
-        lbl_3 = ttk.Label(master=container_3, text="Total Distance from start to end:")
+        lbl_3 = ttk.Label(master=container_3, text="Total Distance from start to end:", font="bold")
         lbl_3.pack(side=LEFT, padx=5)
         
         self.lbl_33 = ttk.Label(master=container_3, text="")
         self.lbl_33.pack(side=LEFT)
+        
+        container_4 = ttk.Frame(self)
+        container_4.pack(fill=X, expand=YES, pady=5)
+        
+        lbl_4 = ttk.Label(master=container_4, text="Total Distance from node to node in euclidian:", font="bold")
+        lbl_4.pack(side=LEFT, padx=5)
+        
+        self.lbl_44 = ttk.Label(master=container_4, text="")
+        self.lbl_44.pack(side=LEFT, expand=YES)
 
     def create_form_entry(self, label, variable):
         container = ttk.Frame(self)
@@ -179,10 +189,13 @@ class main_app(ttk.Frame):
         node_path = sa.findPath(self.algorithm_box.get(), self.cities, self.start_city_box.get(), self.end_city_box.get())
         self.lbl_11.config(text = " -> ".join(node_path[0][::-1]))
         self.lbl_22.config(text = f"{node_path[2]} s")
-        self.lbl_33.config(text = f"{node_path[1]} euclidian unit")
+        self.lbl_33.config(text = f"{node_path[1][0]} euclidian unit")
+        self.lbl_44.config(text = f"{node_path[1][1]}")
+        print(node_path[0])
+        displayGraphImage(node_path[0])
 
     def getAllPossiblePath(self):
-        return
+        displayAllNodesinGraph()
         
     def on_view_all_path(self):
         self.quit()

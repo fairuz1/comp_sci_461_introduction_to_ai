@@ -40,10 +40,10 @@ def initialize_population(activities_name, rooms, times, facilitators, populatio
     random_solutions = []
     for i in range(population_number):
         solution = list([
-            i, 
+            activity_index, 
             random.randint(0, rooms-1), 
             random.randint(0, times-1), 
-            random.randint(0, facilitators-1)] for i in range(activities_name))
+            random.randint(0, facilitators-1)] for activity_index in range(11))
         random_solutions.append(solution)
     
     return tuple(random_solutions)
@@ -65,3 +65,10 @@ def convert_time_format(time):
     # convert time to 24 hour format
     new_hour_format = datetime.strptime(time, '%I %p')
     return new_hour_format.strftime('%H')
+
+def convert_time_format_12(time):
+    # convert time to 12 hour format
+    new_hour_format = datetime.strptime(time, "%H")
+    return new_hour_format.strftime('%I %p')
+
+

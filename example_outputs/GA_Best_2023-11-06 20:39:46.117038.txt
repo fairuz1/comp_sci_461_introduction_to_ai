@@ -13,4 +13,3 @@ Best Solution:
 ['SLA394', ('Loft 310', 108), '02 PM', 'Singer'] 
 ['SLA449', ('Loft 206', 75), '11 AM', 'Richards'] 
 ['SLA451', ('Beach 301', 75), '03 PM', 'Uther'] 
-s

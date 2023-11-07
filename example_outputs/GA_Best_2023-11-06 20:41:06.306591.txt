@@ -1,0 +1,15 @@
+ ----- The best schedule found ----- 
+Generation: 85 
+Fitness Score: 14.2 
+Best Solution: 
+['SLA101A', ('Roman 201', 50), '03 PM', 'Shaw'] 
+['SLA101B', ('Beach 201', 60), '11 AM', 'Singer'] 
+['SLA191A', ('Loft 310', 108), '10 AM', 'Richards'] 
+['SLA191B', ('Logos 325', 450), '03 PM', 'Shaw'] 
+['SLA201', ('Roman 201', 50), '12 PM', 'Zeldin'] 
+['SLA291', ('Slater 003', 45), '10 AM', 'Glen'] 
+['SLA303', ('Beach 301', 75), '02 PM', 'Richards'] 
+['SLA304', ('Slater 003', 45), '11 AM', 'Richards'] 
+['SLA394', ('Beach 301', 75), '11 AM', 'Tyler'] 
+['SLA449', ('Beach 201', 60), '02 PM', 'Lock'] 
+['SLA451', ('Slater 003', 45), '12 PM', 'Richards'] 

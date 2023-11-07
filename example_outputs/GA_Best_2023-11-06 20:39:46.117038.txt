@@ -1,0 +1,16 @@
+ ----- The best schedule found ----- 
+Generation: 42 
+Fitness Score: 11.700000000000001 
+Best Solution: 
+['SLA101A', ('Roman 216', 30), '02 PM', 'Glen'] 
+['SLA101B', ('Slater 003', 45), '11 AM', 'Uther'] 
+['SLA191A', ('Frank 119', 60), '01 PM', 'Uther'] 
+['SLA191B', ('Slater 003', 45), '12 PM', 'Zeldin'] 
+['SLA201', ('Slater 003', 45), '11 AM', 'Lock'] 
+['SLA291', ('Roman 216', 30), '02 PM', 'Uther'] 
+['SLA303', ('Beach 301', 75), '11 AM', 'Richards'] 
+['SLA304', ('Loft 310', 108), '01 PM', 'Lock'] 
+['SLA394', ('Loft 310', 108), '02 PM', 'Singer'] 
+['SLA449', ('Loft 206', 75), '11 AM', 'Richards'] 
+['SLA451', ('Beach 301', 75), '03 PM', 'Uther'] 
+s
